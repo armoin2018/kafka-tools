@@ -136,7 +136,7 @@ def consume_and_produce_messages(config):
 # Rest of the code remains the same...
 def print_help():
     help_text = """
-Usage: python script.py <config_file>
+Usage: python kafka-replay.py <config_file>
 
 Options:
     --help  Show this help message and exit.
