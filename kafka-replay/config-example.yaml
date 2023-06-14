@@ -1,0 +1,36 @@
+producer:
+  brokers: "localhost:9092"
+  security_protocol: "ssl"
+  ssl:
+    ca_location: "/path/to/ca.pem"
+    certificate_location: "/path/to/certificate.pem"
+    key_location: "/path/to/private_key.pem"
+
+consumer:
+  brokers: "localhost:9092"
+  consumer_group: "my_consumer_group"
+  security_protocol: "ssl"
+  ssl:
+    ca_location: "/path/to/ca.pem"
+    certificate_location: "/path/to/certificate.pem"
+    key_location: "/path/to/private_key.pem"
+
+topic_configs:
+  - source:
+      topic: "source_topic"
+      partition: 0
+      copyKey: true
+      copyHeader: true
+      startOffset: 0
+      endOffset: 100
+    destination:
+      topic: "destination_topic"
+      partition: 1
+
+  - source:
+      topic: "source_topic"
+      partition: 1
+      copyKey: false
+      copyHeader: false
+    destination:
+      topic: "destination_topic"
