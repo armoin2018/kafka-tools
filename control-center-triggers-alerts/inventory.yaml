@@ -1,0 +1,7 @@
+triggers:
+  - name: high_throughput
+    event: throughput
+    threshold: 1000
+  - name: error_rate
+    event: error_rate
+    threshold: 0.05

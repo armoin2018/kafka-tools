@@ -1,0 +1,6 @@
+control_center:
+  url: <control_center_url>
+  auth_type: username_password
+  auth_credentials:
+    username: <username>
+    password: <password>

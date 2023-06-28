@@ -1,0 +1,19 @@
+topics:
+  topic1:
+    bootstrap.servers: "<kafka-bootstrap-server1>"
+    security.protocol: "SASL_SSL"
+    ssl.ca.location: "<path-to-ca-cert1>"
+    sasl.mechanism: "PLAIN"
+    sasl.username: "<username1>"
+    sasl.password: "<password1>"
+  topic2:
+    bootstrap.servers: "<kafka-bootstrap-server2>"
+    security.protocol: "SASL_SSL"
+    ssl.ca.location: "<path-to-ca-cert2>"
+    sasl.mechanism: "PLAIN"
+    sasl.username: "<username2>"
+    sasl.password: "<password2>"
+
+cache_folder: "/path/to/cache/folder"
+comparison_threads: 1
+output_format: "html"
