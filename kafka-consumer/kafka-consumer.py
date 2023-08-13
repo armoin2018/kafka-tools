@@ -158,7 +158,7 @@ def convert_to_ssv(data):
             ssv_data += f"{key} {value}\n"
     return ssv_data
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Kafka message consumer')
     parser.add_argument('--config', required=True, help='Kafka connection and security configuration')
     parser.add_argument('--topics', required=True, help='Kafka topics to consume from')
@@ -190,3 +190,6 @@ if __name__ == '__main__':
         print(yaml.dump_all(messages, default_flow_style=False))
     else:
         print("Unsupported output type")
+
+if __name__ == '__main__':
+    main()
